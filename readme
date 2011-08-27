@@ -1,0 +1,10 @@
+Few examples of usage (bash syntax)
+
+#Loads data from csv#
+* lua importCSV.lua  < cats.csv
+
+#Saves data into csv#
+* egrep -l '' units/*.* |  (lua dump.lua "{*.category}" "{*.~Category}" "{*.*.*.~Category}" ) > cats.csv
+
+#In place reconverting/formating#
+* egrep -li "name.*(chicken|roost)" ../Robot-Defense/units/*.* | (lua batch.lua)
